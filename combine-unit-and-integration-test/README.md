@@ -1,5 +1,5 @@
 
-# Combine unit and integrations tests in the same module.
+# Combine unit and integrations tests in the same Maven module.
  
 If you do a little research on how to combine unit and integration tests you will find
 out there is at least two different ways of doing this, and both involves special Maven and IDE configuration.
@@ -8,15 +8,15 @@ The goal is:
 
 *  Unit and Integration test should exist in the same source folder
 *  Executing unit tests from the IDE should only run unit tests
-*  Executing “mvn install” should only execute unit tests, unless other is specified “mvn install -P integratio-test”
+*  Executing “mvn install” should only execute unit tests, unless other is specified “mvn install -P integration-test”
 
-From what I found out, the prefer way is to setup an new source directory for the module/project containing the integration tests and use the [build-helper-maven-plugin](http://mojo.codehaus.org/build-helper-maven-plugin/ "http://mojo.codehaus.org/build-helper-maven-plugin/") to add extra build source directory to maven.
+From what I found out, the prefer way is to setup a new source directory for the module/project containing the integration tests and use the [build-helper-maven-plugin](http://mojo.codehaus.org/build-helper-maven-plugin/ "http://mojo.codehaus.org/build-helper-maven-plugin/") to add an extra build source directory to maven.
 
-Another solution is to place the integration tests in it's own module or multiple modules. The point here is the integration tests are separated from the unit test because the exist in another module location.
+Another solution is to place the integration tests in it's own module or multiple modules. The point here is the integration tests are separated from the unit test because they exist in another module location.
 
 Both solutions comes with pro and cons, and in the end it all comes down to which solution is the most suitable for your project. But I think there is one big disadvantage with both solutions, it requires extra plug-ins and a number of configurations and special settings to make it work.
 
-So I decided to come up with another solution which required a minimum configurations and was easy use and understand. The advantage of this solution is I use a feature in surefire and failsafe plugin to separate the unit and integration tests.
+So I decided to come up with another solution which required minimum configurations and was easy to use and understand. The advantage of this solution is I use a feature in surefire and failsafe plugin to separate the unit and integration tests.
 
 ```xml
    <plugin>
@@ -32,7 +32,7 @@ So I decided to come up with another solution which required a minimum configura
              <configuration>
               <systemPropertyVariables>
                 <!-- This make sure the EclipseIntegrationRunner will execute the tests -->
-                <runEclipseITs>true</runEclipseITs>
+                <runEclipseIntegrationTests>true</runEclipseIntegrationTests>
               </systemPropertyVariables>
                 <!-- this little trick prevent the unit test for running -->
                 <skipTests>${skipITs}</skipTests>
@@ -69,6 +69,6 @@ otherwise they will execute with the normal unit tests.
 
 * Build and run only the integration tests
  
-     ``mvn install -P integratio-test``
+     ``mvn install -P integration-test``
 
 

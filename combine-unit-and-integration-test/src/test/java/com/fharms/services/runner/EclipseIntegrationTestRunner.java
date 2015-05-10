@@ -41,19 +41,19 @@ import org.junit.runners.model.InitializationError;
  * @author fharms
  *
  */
-public class EclipseIntegrationRunner extends BlockJUnit4ClassRunner {
+public class EclipseIntegrationTestRunner extends BlockJUnit4ClassRunner {
 
 	private static final String IGNORE_MESSAGE = "Ignoring Integration tests, set \"runEclipseITs=true\" for running the tests";
-	private final boolean runEclipseITs;
+	private final boolean runEclipseIntegrationTests;
 
-	public EclipseIntegrationRunner(Class<?> clazz) throws InitializationError {
+	public EclipseIntegrationTestRunner(Class<?> clazz) throws InitializationError {
 		super(clazz);
-		runEclipseITs = Boolean.getBoolean("runEclipseITs");
+		runEclipseIntegrationTests = Boolean.getBoolean("runEclipseIntegrationTests");
 	}
 
 	@Override
 	public Description getDescription() {
-		if (!runEclipseITs) {
+		if (!runEclipseIntegrationTests) {
 			Description description = Description.createSuiteDescription(getTestClass().getJavaClass());
 			description.addChild(Description.createTestDescription(getTestClass().getJavaClass(),IGNORE_MESSAGE));
 			return description;
@@ -63,7 +63,7 @@ public class EclipseIntegrationRunner extends BlockJUnit4ClassRunner {
 	
 	@Override
 	public void run(RunNotifier notifier) {
-		if (!runEclipseITs) {
+		if (!runEclipseIntegrationTests) {
 			Description description = Description.createSuiteDescription(getTestClass().getJavaClass());
 			notifier.fireTestIgnored(description);
 			return;

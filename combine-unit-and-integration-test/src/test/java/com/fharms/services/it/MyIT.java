@@ -29,9 +29,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import com.fharms.services.runner.EclipseIntegrationRunner;
+import com.fharms.services.runner.EclipseIntegrationTestRunner;
 /**
- * This show an example of using the {@link EclipseIntegrationRunner} to prevent
+ * This show an example of using the {@link EclipseIntegrationTestRunner} to prevent
  * integration tests for running when you are executing unit test directly in Eclipse
  * 
  * The naming convention is important and should always follow the FailSafe naming rule
@@ -48,7 +48,7 @@ import com.fharms.services.runner.EclipseIntegrationRunner;
  * @author fharms
  *
  */
-@RunWith(EclipseIntegrationRunner.class)
+@RunWith(EclipseIntegrationTestRunner.class)
 public class MyIT {
 
 	@Before
