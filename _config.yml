@@ -1,4 +1,14 @@
 gems:
   - jekyll-redirect-from
-markdown: redcarpet
+title: "Blog-127.0.0.1"
+description: "My personal git blog where you can find small Java, Maven, Wildfly, Java EE, etc articles and examples"
+url: "fharms.github.com"
+
+paginate: 10
+paginate_path: "_layouts/page:num"
+
+markdown: rdiscount
+permalink: pretty
+highlighter: pygments
+
 
