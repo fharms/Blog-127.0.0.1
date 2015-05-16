@@ -21,7 +21,7 @@ Another solution is to place the integration tests in it's own module or multipl
 
 Both solutions comes with pro and cons, and in the end it all comes down to which solution is the most suitable for your project. But I think there is one big disadvantage with both solutions, it requires extra plug-ins and a number of configurations and special settings to make it work.
 
-## The solution
+## ./ The solution
 
 I decided to come up with another solution which required minimum configurations and was easy to use and understand. The advantage of this solution is I use the feature in surefire and failsafe plugin to separate the unit and integration tests for Maven, and a JUnit runner for Eclipse.
 
