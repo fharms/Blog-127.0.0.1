@@ -95,6 +95,7 @@ h1, h2, h3, h4, h5, h6 {
                0 0 10px rgba(181, 232, 83, 0.1);
 }
 
+
 #main_content h1 {
   font-size: 30px;
 }
@@ -240,6 +241,12 @@ hr {
 
 a {
   color: #63c0f5;
+  text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
+}
+
+h2 a {
+  color: #b5e853;
+  text-decoration: none;
   text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
 }
 

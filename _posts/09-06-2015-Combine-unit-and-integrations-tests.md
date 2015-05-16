@@ -7,13 +7,13 @@ tags: Java, Maven, JUnit, Unit test, Integration test
 If you do a little research on how to combine unit and integration tests you will find
 out there is at least two different ways of doing this, and both involves special Maven and IDE configuration.
 
-## ./ The goal is
+## <a name="thegoal"></a>[./](#thegoal) The goal is
 
 *  Unit and Integration test should exist in the same source folder
 *  Executing unit tests from the IDE should only run unit tests
 *  Executing “mvn install” should only execute unit tests, unless other is specified “mvn install -P integration-test”
 
-## ./ What did I found out
+## <a name="whatdidifoundout"></a>[./](#whatdidifoundout) What did I found out
 
 The prefer way is to setup a new source directory for the module/project containing the integration tests and use the [build-helper-maven-plugin](http://mojo.codehaus.org/build-helper-maven-plugin/ "http://mojo.codehaus.org/build-helper-maven-plugin/") to add an extra build source directory to maven.
 
@@ -21,7 +21,7 @@ Another solution is to place the integration tests in it's own module or multipl
 
 Both solutions comes with pro and cons, and in the end it all comes down to which solution is the most suitable for your project. But I think there is one big disadvantage with both solutions, it requires extra plug-ins and a number of configurations and special settings to make it work.
 
-## ./ The solution
+## <a name="solution"></a>[./](#solution) The solution
 
 I decided to come up with another solution which required minimum configurations and was easy to use and understand. The advantage of this solution is I use the feature in surefire and failsafe plugin to separate the unit and integration tests for Maven, and a JUnit runner for Eclipse.
 
@@ -87,7 +87,7 @@ public class MyIT { ... }
 The down side is you have to remember adding the @RunWith(EclipseIntegrationRunner.class),
 otherwise they will execute with the normal unit tests. Another down side is you can't use multiple @RunWith with the same test case. 
 
-## ./ Where do I find the code.
+## <a name="wheredoifindthecode"></a>[./](#wheredoifindthecode) Where do I find the code.
 
 >Jump to the [source code](https://github.com/fharms/java-examples/tree/master/combine-unit-and-integration-test) on github 
 
