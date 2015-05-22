@@ -6,7 +6,7 @@ tags: Java, Maven, Wildfly, Java EE
 <header>
       <div class="container">
         <h1>Blog-127.0.0.1</h1>
-        <h2><a id="welcome-to-blog-127001" class="anchor" href="#welcome-to-blog-127001" aria-hidden="true"><span class="octicon octicon-link"></span></a>So what can you expect to find on this blog? I can promise you will not find recipes for buns or DIY dinning table even though i'm actually pretty good at both. You will find what I call small git blog's with examples for Maven, Java, Wildfly and Java EE examples baked on my experiences when encountered the different technologies</h2>
+        <h2><a id="welcome-to-blog-127001" class="anchor" href="#welcome-to-blog-127001" aria-hidden="true"><span class="octicon octicon-link"></span></a>So what can you expect to find on this blog? I can promise you will not find recipes for buns or DIY dinning table even though i'm actually pretty good at both. You will find what I call small git blog's with examples for Maven, Java, Wildfly and Java EE examples baked on my experiences when encountered the different technologies..</h2>
       </div>
 </header>
 
@@ -15,9 +15,6 @@ tags: Java, Maven, Wildfly, Java EE
         
       </section>
 </div>
-
-
-
 <div class="container">
   <section id="main_content">
     <div class="posts">
@@ -28,8 +25,14 @@ tags: Java, Maven, Wildfly, Java EE
             {{ post.title }}
           </a>
         </h1>
-         {{ post.excerpt }}
+        <p>
+        {% if post.content contains '<!--more-->' %}
+          {{ post.content | split:'<!--more-->' | first }}
+        {% else %}
+          {{ post.excerpt }}
+        {% endif %}
         <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+        </p>
       </article>
       {% endfor %}
     </div>
