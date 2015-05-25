@@ -16,7 +16,7 @@ There were many strong arguments for using Hibernate OGM, but as always when you
  
 So I decided to create a POC with our current technology stack the almighty [Wildfly 8.2](http://wildfly.org/news/2014/11/20/WildFly82-Final-Released/), Hibernate ORM, Infinispan and now Hibernate OGM 4.1.3.Final.
  
-## <a name=”thegoal”>[./](#thegoal) The goal is to
+## <a name=”thegoal”>[./](#thegoal) The goal is
 *  Install Hibernate OGM 4.1.3 into Wildfly 8.2
 *  Deploy an application using Hibernate OGM
  
