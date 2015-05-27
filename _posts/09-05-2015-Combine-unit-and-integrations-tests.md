@@ -13,7 +13,7 @@ out there is at least two different ways of doing this, and both involves specia
 *  Executing unit tests from the IDE should only run unit tests
 *  Executing “mvn install” should only execute unit tests, unless other is specified “mvn install -P integration-test”
 
-## <a name="whatdidifoundout"></a>[./](#whatdidifoundout) What did I found out
+## <a name="whatdidifoundout"></a>[./](#whatdidifoundout) What I found out
 
 The prefer way is to setup a new source directory for the module/project containing the integration tests and use the [build-helper-maven-plugin](http://mojo.codehaus.org/build-helper-maven-plugin/ "http://mojo.codehaus.org/build-helper-maven-plugin/") to add an extra build source directory to maven.
 

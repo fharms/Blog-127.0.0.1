@@ -9,16 +9,11 @@ layout: default
             <p align="left"><a href="/" title="Home">{{ site.title }}</a></p>
 
             <h1 class="post-title">{{ page.title }}</h1>
-            <div id="post_header">
-              <div id="share_button"></div>
-              <div id="date_headline"><time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time></div>
-            </div>
-          </header>
+           </header>
          {{ content }}
          <header>
          </header>
-         {% include comments.html %}
-     </section>
+      </section>
     </div>
 
 <article>

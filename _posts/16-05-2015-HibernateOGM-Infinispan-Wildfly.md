@@ -20,7 +20,7 @@ So I decided to create a POC with our current technology stack the almighty [Wil
 *  Install Hibernate OGM 4.1.3 into Wildfly 8.2
 *  Deploy an application using Hibernate OGM
  
-## <a name="whatdidifoundout"></a>[./](#whatdidifoundout) What did I found out
+## <a name="whatdidifoundout"></a>[./](#whatdidifoundout) What I found out
  
 I started with the [Hibernate OGM documentation](http://docs.jboss.org/hibernate/ogm/4.1/reference/en-US/html/ogm-configuration.html#ogm-configuration-jbossmodule) and the first question I encountered, was it even possible to get it to work with Infinispan 6.0.2?
  
@@ -139,7 +139,7 @@ There are a few issues with the persistence.xml that you have to be aware of.
  
 >Jump to the [source code](https://github.com/fharms/java-examples/tree/master/hibernate-ogm-infinispan7-jpa-example) on github
  
-## <a name="whatdidilearn"></a>[./](#whatdidilearn) What did I learn?
+## <a name="whatdidilearn"></a>[./](#whatdidilearn) What I learnt
  
 It was straightforward to use for this use case, but with all software, there are always issues. So don’t expect anything less with Hibernate OGM.
  
