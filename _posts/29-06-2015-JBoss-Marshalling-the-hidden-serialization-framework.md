@@ -6,7 +6,7 @@ tags: Java, Hibernate, JBoss Marshalling
 A few years back, I had the challenge to find a better solution for sending data between our client and server, and I think it’s about time to blog about it :-) We have been using XStream to serialize our java model to XML and it is sent via web service. This has been working fine for a long time, but our data structure was increasing in size and we started to suffer for performance, increasing memory footprint and unnecessary complexity.
  
 It was time to come up with a new solution.
- 
+<!--more--> 
 ## <a name=”thegoal”>[./](#thegoal) The goal is to
 *  Increase serialization speed and lower memory footprint.
 *  Support for custom object translators.
