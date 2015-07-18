@@ -2,8 +2,9 @@
 layout: post
 title: Combine unit and integrations tests in the same module
 tags: Java, Maven, JUnit, Unit test, Integration test
+post_author: Flemming Harms
 ---
- 
+
 If you do a little research on how to combine unit and integration tests you will find
 out there is at least two different ways of doing this, and both involves special Maven and IDE configuration.
 
@@ -85,9 +86,8 @@ public class MyIT { ... }
 ```
 
 The down side is you have to remember adding the @RunWith(EclipseIntegrationRunner.class),
-otherwise they will execute with the normal unit tests. Another down side is you can't use multiple @RunWith with the same test case. 
+otherwise they will execute with the normal unit tests. Another down side is you can't use multiple @RunWith with the same test case.
 
 ## <a name="wheredoifindthecode"></a>[./](#wheredoifindthecode) Where do I find the code.
 
->Jump to the [source code](https://github.com/fharms/java-examples/tree/master/combine-unit-and-integration-test) on github 
-
+>Jump to the [source code](https://github.com/fharms/java-examples/tree/master/combine-unit-and-integration-test) on github
