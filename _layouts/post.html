@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <article>
 
     <div class="container">
@@ -26,6 +27,16 @@ layout: default
          {{ content }}
          <header>
          </header>
+         <div id="tagsection">
+           <div id="tagheader">Tags </div>
+             {% if page.tags == null %}
+               Not tagged.
+             {% else %}
+                 {% for tag in page.tags %}
+                   <div id="tagsbadge"><a href="/tags#{{ tag | slugify }}-ref">{{ tag | capitalize}}</a></div>
+                 {% endfor %}
+             {% endif %}
+         </div>
          {% include comments.html %}
      </section>
     </div>

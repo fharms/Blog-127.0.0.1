@@ -1,0 +1,52 @@
+---
+layout: default
+title: Tags
+description: Tag list from the blog
+permalink: /tags/
+---
+{% assign tags_list = site.tags | sort %}
+<header>
+      <div class="container">
+        <div id="index_header">
+          <div id="index_title"><h1>Blog-127.0.0.1</h1></div>
+          <div id="about"><a href="../about/"><img src="../images/me.png" class="rounded" title="Me"/></a></div>
+        </div>
+      </div>
+</header>
+
+<div class="container">
+      <section id="main_content">
+
+      </section>
+</div>
+<div class="container">
+  <section id="main_content">
+    <div class="posts">
+      <h2>Tag List</h2>
+      {% for tag in tags_list  %}
+          <span style="font-size: {{ tag | last | size  |  times: 50 | plus: 80  }}%">
+            <a href="/tags#{{ tag[0] | slugify }}-ref" id="tagsbadge">{{ tag[0] | capitalize }}</a>
+          </span>
+      {% endfor %}
+      </hr>
+      {% for tag in tags_list  %}
+        <h2 id="{{ tag[0] | slugify }}-ref">{{ tag[0] | capitalize }}</h2>
+        <ul>
+          {% assign pages_list = tag[1] %}
+
+          {% for node in pages_list %}
+            {% if node.title != null %}
+              {% if group == null or group == node.group %}
+                <li><a href="{{node.url}}">{{node.title}}</a></li>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+
+          {% assign pages_list = nil %}
+          {% assign group = nil %}
+        </ul>
+        {% endfor %}
+        {% assign tags_list = nil %}
+    </div>
+ </section>
+</div>

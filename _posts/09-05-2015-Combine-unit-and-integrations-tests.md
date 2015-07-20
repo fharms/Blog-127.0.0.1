@@ -1,8 +1,15 @@
 ---
 layout: post
 title: Combine unit and integrations tests in the same module
-tags: Java, Maven, JUnit, Unit test, Integration test
+categories : [Unit-Test]
+tags:
+- Java
+- Maven
+- JUnit
+- Unit test
+- Integration test
 post_author: Flemming Harms
+redirect_from: "/2015/05/09/Combine-unit-and-integrations-tests/"
 ---
 
 If you do a little research on how to combine unit and integration tests you will find

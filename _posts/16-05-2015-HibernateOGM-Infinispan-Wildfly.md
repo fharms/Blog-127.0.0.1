@@ -1,8 +1,15 @@
 ---
 layout: post
 title: Hibernate OGM with JPA and Infinispan on Wildfly 8.2
-tags: Java, Hibernate OGM, JPA, Infinispan, Wildfly
+categories : [Hibernate-OGM]
+tags:
+ - Hibernate OGM
+ - JPA
+ - Java
+ - Infinispan
+ - Wildfly
 post_author: Flemming Harms
+redirect_from: "/2015/05/16/HibernateOGM-Infinispan-Wildfly/"
 ---
 
 Recently, we had a task where we had to choose whether we should use the current architecture.

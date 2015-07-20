@@ -1,8 +1,14 @@
 ---
 layout: post
 title: JBoss Marshalling the hidden serialization framework
-tags: Java, Hibernate, JBoss Marshalling
+categories : [JBoss-Marshalling]
+tags:
+ - Java
+ - Hibernate
+ - JBoss Marshalling
+ - Serialization
 post_author: Flemming Harms
+redirect_from: "/2015/06/29/JBoss-Marshalling-the-hidden-serialization-framework/"
 ---
 A few years back, I had the challenge to find a better solution for sending data between our client and server, and I think it’s about time to blog about it :-) We have been using XStream to serialize our java model to XML and it is sent via web service. This has been working fine for a long time, but our data structure was increasing in size and we started to suffer for performance, increasing memory footprint and unnecessary complexity.
 
