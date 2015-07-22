@@ -1,34 +1,19 @@
 ---
-layout: default
+layout: page
 title: Tags
 description: Tag list from the blog
 permalink: /tags/
 ---
 {% assign tags_list = site.tags | sort %}
-<header>
-      <div class="container">
-        <div id="index_header">
-          <div id="index_title"><h1>Blog-127.0.0.1</h1></div>
-          <div id="about"><a href="../about/"><img src="../images/me.png" class="rounded" title="Me"/></a></div>
-        </div>
-      </div>
-</header>
-
-<div class="container">
-      <section id="main_content">
-
-      </section>
-</div>
-<div class="container">
-  <section id="main_content">
-    <div class="posts">
-      <h2>Tag List</h2>
+     <div class="container">
       {% for tag in tags_list  %}
           <span style="font-size: {{ tag | last | size  |  times: 50 | plus: 80  }}%">
-            <a href="/tags#{{ tag[0] | slugify }}-ref" id="tagsbadge">{{ tag[0] | capitalize }}</a>
+            <a class="tagsbadge" href="/tags#{{ tag[0] | slugify }}-ref" id="tagsbadge">{{ tag[0] | capitalize }}</a>
           </span>
       {% endfor %}
-      </hr>
+    </div>
+
+    <div class="container">
       {% for tag in tags_list  %}
         <h2 id="{{ tag[0] | slugify }}-ref">{{ tag[0] | capitalize }}</h2>
         <ul>
@@ -48,5 +33,3 @@ permalink: /tags/
         {% endfor %}
         {% assign tags_list = nil %}
     </div>
- </section>
-</div>

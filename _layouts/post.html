@@ -27,15 +27,16 @@ layout: default
          {{ content }}
          <header>
          </header>
-         <div id="tagsection">
-           <div id="tagheader">Tags </div>
+         <div id="tagsection" class="tagsection">
+           <div id="tagheader" class="tagheader">Tags </div>
              {% if page.tags == null %}
                Not tagged.
              {% else %}
                  {% for tag in page.tags %}
-                   <div id="tagsbadge"><a href="/tags#{{ tag | slugify }}-ref">{{ tag | capitalize}}</a></div>
+                   <div id="tagsbadge" class="tagsbadge"><a class="tagslink" href="/tags#{{ tag | slugify }}-ref">{{ tag | capitalize}}</a></div>
                  {% endfor %}
              {% endif %}
+            <div id="categoryheader" class="categoryheader">Categories <div id="categorybadge" class="categorybadge"> {{ page.categories }} </div></div>
          </div>
          {% include comments.html %}
      </section>

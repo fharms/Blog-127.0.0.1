@@ -156,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
   float: right;
 }
 
-#tag {
+.tag {
   float :inherit;
   margin : 2px;
   background-color: #AAA;
@@ -164,34 +164,51 @@ h1, h2, h3, h4, h5, h6 {
   display: inline;
   padding: 3px;
 }
-#tag a {
-  color: #B5E853;
-  text-decoration: none;
-  text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
-}
-#tagheader {
-  margin-top : 5px;
+
+.tagheader {
+  margin-top : 7px;
   margin-bottom: 5px;
+  padding-right: 5px;
   float :inherit;
 }
 
-#tagsection {
+.tagsection {
   float: left;
   width: 100%;
   margin-top: -30px;
   padding-bottom: 40px;
 }
 
-#tagsbadge {
+a.tagslink {
+  color: #56651A;
+  font-size: small;
+  text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
+}
+
+.tagsbadge  {
     background-color: #E6EFC2;
     border-radius: 3.75em;
     color: #56651A;
     display: inline-block;
-    font-size: 0.75em;
-    font-weight: 600;
     line-height: 1;
     padding: 0.4em 1.2em;
-    margin: 5px;
+    margin: 5px 2px 5px 2px;
+}
+
+.categoryheader {
+  margin-top : 5px;
+  margin-bottom: 5px;
+}
+
+.categorybadge  {
+    background-color: #b8d14f;
+    border-radius: 3.75em;
+    color: #56651A;
+    display: inline-block;
+    font-size: small;
+    line-height: 1;
+    padding: 0.4em 1.2em;
+    margin: 5px 2px 5px 2px;
 }
 
 #date_headline {
