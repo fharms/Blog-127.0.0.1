@@ -10,6 +10,6 @@ paginate_path: "_layouts/page:num"
 
 markdown: kramdown
 permalink: pretty
-highlighter: pygments
+highlighter: rouge
 
 
