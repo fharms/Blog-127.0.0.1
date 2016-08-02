@@ -1,2 +1,5 @@
 
 _site/
+.idea/
+.vagrant/
+Gemfile.lock

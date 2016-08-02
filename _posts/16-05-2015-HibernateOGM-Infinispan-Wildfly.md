@@ -41,11 +41,11 @@ Fortunately, this is really easy to do. When you install the modules, it will co
 I have created a small solution where I create a simple remote queue service, where you are able to subscribe, unsubscribe and post/consume messages.
 
 In the package :
->[org.hibernate.ogm.infinispan7.jpa.example.model](https://github.com/fharms/java-examples/tree/master/hibernate-ogm-infinispan7-jpa-example/src/main/java/com/fharms/ogm/infinispan7/jpa/example/model) you will find the JPA entities.
+>[org.hibernate.ogm.infinispan7.jpa.example.model](https://github.com/fharms/java-examples/tree/ogm41-wildfly82/hibernate-ogm-infinispan7-jpa-example/src/main/java/com/fharms/ogm/infinispan7/jpa/example/model) you will find the JPA entities.
 
->[org.hibernate.ogm.infinispan7.jpa.example.dao](https://github.com/fharms/java-examples/tree/master/hibernate-ogm-infinispan7-jpa-example/src/main/java/com/fharms/ogm/infinispan7/jpa/example/dao) you will find the service that is responsible for persisting the entities.
+>[org.hibernate.ogm.infinispan7.jpa.example.dao](https://github.com/fharms/java-examples/tree/ogm41-wildfly82/hibernate-ogm-infinispan7-jpa-example/src/main/java/com/fharms/ogm/infinispan7/jpa/example/dao) you will find the service that is responsible for persisting the entities.
 
-I have created an [arquillian test](https://github.com/fharms/java-examples/blob/master/hibernate-ogm-infinispan7-jpa-example/src/test/java/com/fharms/ogm/infinispan7/jpa/example/dao/RemoteEventDaoIT.java) to show it actually work.
+I have created an [arquillian test](https://github.com/fharms/java-examples/tree/ogm41-wildfly82/hibernate-ogm-infinispan7-jpa-example/src/test/java/com/fharms/ogm/infinispan7/jpa/example/dao/RemoteEventDaoIT.java) to show it actually work.
 
 The main pom file takes care of all the setup and installation of Hibernate OGM. I use the maven-dependency-plugin for this, but if you want to use a DIY method, follow the [manual steps](#manually_install_hibernate)
 
@@ -145,7 +145,7 @@ There are a few issues with the persistence.xml that you have to be aware of.
 
 ## <a name="wheredoifindthecode"></a>[./](#wheredoifindthecode) Where do I find the code.
 
->Jump to the [source code](https://github.com/fharms/java-examples/tree/master/hibernate-ogm-infinispan7-jpa-example) on github
+>Jump to the [source code](https://github.com/fharms/java-examples/tree/ogm41-wildfly82/hibernate-ogm-infinispan7-jpa-example) on github
 
 ## <a name="whatdidilearn"></a>[./](#whatdidilearn) What I learnt
 

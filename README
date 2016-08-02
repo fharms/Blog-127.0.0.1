@@ -1,0 +1,7 @@
+How to run this site local
+
+- Install Vagrant - https://www.vagrantup.com/downloads.html
+- vagrant up
+- ssh vagrant@127.0.0.1 -p 2222
+- cd /vagrant
+- Start the blog "jekyll serve --force_polling --host 0.0.0.0"
