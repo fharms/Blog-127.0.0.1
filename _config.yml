@@ -8,7 +8,7 @@ url: "fharms.github.com"
 paginate: 10
 paginate_path: "_layouts/page:num"
 
-markdown: rdiscount
+markdown: kramdown
 permalink: pretty
 highlighter: pygments
 
