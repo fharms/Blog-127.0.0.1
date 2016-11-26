@@ -68,6 +68,11 @@ header h2 {
   color: #666;
 }
 
+img[src$="centerme"] {
+  display:block;
+  margin: 0 auto;
+}
+
 #downloads .btn {
   display: inline-block;
   text-align: center;

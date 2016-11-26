@@ -75,12 +75,12 @@ The trick here is we need to save the EntityManager for later use in a thread lo
 The EntityManager is removed again when the transaction is completed, regardless of whether it’s committed or rollback. See [SessionCloseSynchronizationManager](https://github.com/fharms/camel-jpa-entitymanager/blob/master/src/main/java/com/github/fharms/camel/entitymanager/CamelEntityManagerHandler.java#L180)
 
 The diagram show the behavior of the bean proxy 
-[<img src="/images/Apache-Camel/bean-state-diagram-small.png">](/images/Apache-Camel/bean-state-diagram.png)
+[<img src="/images/Apache-Camel/bean-state-diagram-small.png?style=centerme">](/images/Apache-Camel/bean-state-diagram.png)
 
 The CamelEntityManagerHandler proxy part is straight forward. It wraps the existing EntityManager proxy with its own proxy and controls the flow and state.
 
 The diagram show the behavior of the entity manager proxy 
-[<img src="/images/Apache-Camel/proxy-state-diagram-small.png">](/images/Apache-Camel/proxy-state-diagram.png)
+[<img src="/images/Apache-Camel/proxy-state-diagram-small.png?style=centerme">](/images/Apache-Camel/proxy-state-diagram.png)
 
 ## <a name="solution"></a>[./](#solution) Using the Camel Entity Manager post processor with Camel
 
